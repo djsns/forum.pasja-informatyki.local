@@ -475,7 +475,18 @@ TAG
         $id = (($ids) ? ' id="' . $ids . '"' : null);
 
         $this->output('<div class="qam-search ' . $default_color . ' ' . $addon_class . '" ' . $id . ' >');
-        $this->search();
+        $this->output("<script>
+  (function() {
+    var cx = '007355532570880811563:5ryewooma2e';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>");
         $this->output('</div>');
     }
 
